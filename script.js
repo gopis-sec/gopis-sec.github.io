@@ -10,6 +10,7 @@ const DATA = {
   badges: ["SecOps", "SIEM", "DLP", "Incident Response"],
   location: "Chennai, India",
   email: "sgopi1997@gmail.com",
+   phones: "",
   linkedin: "https://www.linkedin.com/in/gopi--s",   // ← add your LinkedIn URL here (leave "" to hide)
   github: "https://github.com/gopis-sec",     // ← add your GitHub URL here (leave "" to hide)
   contactNote: "Open to Security Engineering and SecOps opportunities. Reach out and let’s connect.",
