@@ -10,7 +10,7 @@ const DATA = {
   badges: ["SecOps", "SIEM", "DLP", "Incident Response"],
   location: "Chennai, India",
   email: "sgopi1997@gmail.com",
-   phones: "",
+ phones: [], // ← add your phone number [+91 12345678] here 
   linkedin: "https://www.linkedin.com/in/gopi--s",   // ← add your LinkedIn URL here (leave "" to hide)
   github: "https://github.com/gopis-sec",     // ← add your GitHub URL here (leave "" to hide)
   contactNote: "Open to Security Engineering and SecOps opportunities. Reach out and let’s connect.",
@@ -91,14 +91,14 @@ const DATA = {
   $("badges").innerHTML=D.badges.map(function(b){return '<span class="badge">'+esc(b)+'</span>'}).join("");
   var mail='<a href="mailto:'+esc(D.email)+'">'+esc(D.email)+'</a>';
   var phones=D.phones.map(function(p){return '<a href="'+tel(p)+'">'+esc(p)+'</a>'}).join("<br>");
-  $("meta").innerHTML='<div><strong>Location</strong><br>'+esc(D.location)+'</div><div><strong>Phone</strong><br>'+phones+'</div><div><strong>Email</strong><br>'+mail+'</div>';
+  $("meta").innerHTML='<div><strong>Location</strong><br>'+esc(D.location)+'</div><div><strong>Email</strong><br>'+mail+'</div>'; //$("meta").innerHTML='<div><strong>Location</strong><br>'+esc(D.location)+'</div><div><strong>Phone</strong><br>'+phones+'</div><div><strong>Email</strong><br>'+mail+'</div>';
   $("comp").innerHTML=D.competencies.map(function(c){return '<div class="box"><h4>'+esc(c.name)+'</h4><p>'+esc(c.desc)+'</p></div>'}).join("");
   $("tech").innerHTML=D.tech.map(function(t){return '<div><b>'+esc(t[0])+'</b><span>'+esc(t[1])+'</span></div>'}).join("");
   $("exp").innerHTML=D.experience.map(function(j){return '<div class="job"><div class="job-head"><h4>'+esc(j.role)+' · <span class="co">'+esc(j.company)+'</span></h4><span class="when">'+esc(j.period)+'</span></div><ul>'+j.points.map(function(p){return "<li>"+esc(p)+"</li>"}).join("")+'</ul></div>'}).join("");
   $("certList").innerHTML=D.certs.map(function(c){return "<li>"+esc(c)+"</li>"}).join("");
   $("edu").innerHTML=D.education.map(function(e){return '<div class="edu"><strong>'+esc(e.degree)+'</strong><br>'+esc(e.school)+' · '+esc(e.note)+'</div>'}).join("");
   $("str").innerHTML=D.strengths.map(function(s){return '<span class="badge">'+esc(s)+'</span>'}).join("");
-  var cg='<div><strong>Email</strong><br>'+mail+'</div><div><strong>Phone</strong><br>'+phones+'</div><div><strong>Location</strong><br>'+esc(D.location)+'</div>';
+  var cg='<div><strong>Email</strong><br>'+mail+'</div><div><strong>Location</strong><br>'+esc(D.location)+'</div>';//var cg='<div><strong>Email</strong><br>'+mail+'</div><div><strong>Phone</strong><br>'+phones+'</div><div><strong>Location</strong><br>'+esc(D.location)+'</div>';
   if(D.linkedin)cg+='<div><strong>LinkedIn</strong><br><a href="'+esc(D.linkedin)+'" target="_blank" rel="noopener">Profile</a></div>';
   if(D.github)cg+='<div><strong>GitHub</strong><br><a href="'+esc(D.github)+'" target="_blank" rel="noopener">Repo</a></div>';
   $("cgrid").innerHTML=cg;
